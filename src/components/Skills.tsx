@@ -3,21 +3,20 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "Robotics",
+  "3d Printing",
   "ROS2",
   "Autonomous Systems",
   "LiDAR Mapping",
   "SLAM",
   "Embedded Systems",
   "Control Systems",
-  "Drones",
+  "Drones / UAV",
   "Aerospace Systems",
   "AI / ML",
   "Neural Networks",
   "Python",
   "Linux",
   "Git",
-  "Data Science",
   "Simulation",
   "Fusion 360",
   "CAD / CAM",

@@ -59,6 +59,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
           <Tilt
+            key={project.title}
             tiltMaxAngleX={8}
             tiltMaxAngleY={8}
             perspective={1200}

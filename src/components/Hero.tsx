@@ -2,6 +2,20 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
+const stars = [
+  { top: "10%", left: "15%" },
+  { top: "18%", left: "72%" },
+  { top: "28%", left: "35%" },
+  { top: "42%", left: "80%" },
+  { top: "55%", left: "20%" },
+  { top: "63%", left: "65%" },
+  { top: "75%", left: "40%" },
+  { top: "84%", left: "88%" },
+  { top: "90%", left: "12%" },
+  { top: "25%", left: "90%" },
+  { top: "48%", left: "8%" },
+  { top: "70%", left: "75%" },
+];
 
 export default function Hero() {
   return (
@@ -9,13 +23,13 @@ export default function Hero() {
       
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-  {[...Array(40)].map((_, i) => (
+  {stars.map((star, i) => (
     <div
       key={i}
       className="absolute h-[2px] w-[2px] rounded-full bg-white"
       style={{
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
+        top: star.top,
+        left: star.left,
       }}
     />
   ))}
