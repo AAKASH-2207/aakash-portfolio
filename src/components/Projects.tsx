@@ -1,18 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+
 const projects = [
   {
-    title: "ROS2 LiDAR Mapping Platform",
-    category: "Autonomous Systems",
+    title: "Micro Kamikaze Drone",
+    category: "Autonomous M-UAV System",
+    image:"/projects/microdrone.PNG",
     description:
-      "A ROS2-based LiDAR mapping and surveillance platform focused on edge processing, environmental awareness, and real-time navigation.",
-    stack: ["ROS2", "LiDAR", "SLAM", "Linux"],
+      "A 40 mm x 40 mm micro drone, with custom flight controller with facial recognition and a 3-Gram PETN Payload",
+    stack: ["Micro Drones", "Facial Recognition", "Flight Control Systems", "Embedded"],
   },
   {
     title: "Flight Simulator Control System",
     category: "Defense Simulation",
+    image:"/projects/microdrone.PNG",
     description:
       "Designed indigenous simulation hardware and control architecture for advanced flight training and embedded interaction systems.",
     stack: ["Embedded", "Control Systems", "Simulation"],
@@ -20,6 +24,7 @@ const projects = [
   {
     title: "Autonomous Drone Systems",
     category: "Aerospace Robotics",
+    image:"/projects/microdrone.PNG",
     description:
       "Worked on autonomous drone concepts for reconnaissance, mobility, environmental sensing, and defense-oriented applications.",
     stack: ["Drones", "Sensors", "AI", "Navigation"],
@@ -27,6 +32,7 @@ const projects = [
   {
     title: "AI / Neural Network Systems",
     category: "Machine Intelligence",
+    image:"/projects/microdrone.PNG",
     description:
       "Built machine learning and neural network-based systems focused on analytics, prediction, automation, and intelligent workflows.",
     stack: ["Python", "ML", "Neural Networks", "Data Science"],
@@ -68,16 +74,19 @@ export default function Projects() {
             scale={1.02}
             >
             <motion.div
-              key={index}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="group rounded-3xl overflow-hidden border border-slate-800 bg-white/[0.03] backdrop-blur-xl hover:border-slate-500 hover:shadow-2xl hover:-translate-y-2 transition duration-300 hover:border-cyan-400/30 hover:shadow-[0_0_40px_rgba(37,99,235,0.18)]"
             >
-              {/* Image Placeholder */}
-              <div className="h-56 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-slate-500 text-sm tracking-wider uppercase">
-                Project Visual Placeholder
+              <div className="relative h-56 overflow-hidden">
+              <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover group-hover:scale-105 transition duration-500"
+              />
               </div>
 
               {/* Content */}
