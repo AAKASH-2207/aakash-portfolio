@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import About from "../components/About";
 import BlogPreview from "../components/BlogPreview";
 import Contact from "../components/Contact";
@@ -7,7 +8,6 @@ import Hero from "../components/Hero";
 import Navbar from "../components/navbar";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-
 export default function Home() {
   return (
     <main className="bg-[#060B14] text-white min-h-screen">
@@ -20,6 +20,8 @@ export default function Home() {
       <BlogPreview />
       <Contact />
       <Footer />
+      <Analytics/>
     </main>
+    
   );
 }
